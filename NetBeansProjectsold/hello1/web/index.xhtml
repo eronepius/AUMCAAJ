@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Guest Book</title>
+    </h:head>
+    <h:body>
+    <h:form>
+        <div class="card">
+        <h3>Login To Access Guest Book</h3>
+        <div class="field grid">
+            <p:outputLabel for="username" styleClass="col-fixed" style="width:100px" value="Username :" />
+            <div class="col">
+                <p:inputText id="username" value="#{theUserName}"/>
+            </div>
+        </div>
+        <div class="field grid">
+            <p:outputLabel for="password" styleClass="col-fixed" style="width:100px" value="Password :"/>
+            <div class="col">
+                <p:password id="password" value="#{thePassword}"></p:password>
+            </div>
+        </div>
+        <div class="field grid">
+            <br></br>
+            <p:commandButton id="login" value="Login" action="myresponse"></p:commandButton>
+        </div>
+        </div>
+    </h:form> 
+    </h:body>
+</html>
+

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Guest Details</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="card">
+                <h2></h2>
+                <h3>Add Guest to the Guestbook.</h3>
+                <div class="field grid">
+                    <div class="col">
+                        <p:outputLabel for="name" styleClass="col-fixed" style="width:150px" value="Name :" />
+                        <p:inputText id="name" value="#{GuestsObject.name}"/>
+                    </div>
+                </div>
+                <br></br>
+                <div class="field grid">
+                    <div class="col">
+                        <p:outputLabel for="email" styleClass="col-fixed" style="width:150px" value="Email :" />
+                        <p:inputText id="email" value="#{GuestsObject.email}"/>
+                    </div>
+                </div>
+                <br></br>
+                <div class="field grid">
+                    <div class="col">
+                        <p:outputLabel for="message" styleClass="col-fixed" style="width:150px" value="Message :" />
+                        <p:inputTextarea id="message" value="#{GuestsObject.message}"/>
+                    </div>
+                </div>
+                <br></br>
+                <div class="field grid">
+                    <div class="col">
+                        <p:outputLabel for="entrydate" styleClass="col-fixed" style="width:150px" value="Entry Date :" />
+                        <p:calendar id="entrydate" value="#{GuestsObject.entrydate}"/>
+                    </div>
+                </div>
+                <br></br>
+                <div class="field grid">
+                    <p:commandButton id="submit" value="Add Guest" action="#{GuestsObject.addGuest()}"></p:commandButton>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
